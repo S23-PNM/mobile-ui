@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet,View,Text,Button } from 'react-native';
 import { Box,VStack } from 'native-base';
+import { useNavigation } from '@react-navigation/native';
 
 
-export default function Store(props, {navigation, route}) {
+export default function Store(props) {
 
+    const navigation = useNavigation();
 
     return (
       
