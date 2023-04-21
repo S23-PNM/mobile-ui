@@ -27,7 +27,7 @@ export default function Store(props) {
                     <Text style={styles.middleText}>
                         {props.status}
                     </Text>
-                    <Button style={styles.lowerText} onPress={() => navigation.navigate("Home")} title="View More ->"></Button>
+                    <Button style={styles.lowerText} onPress={() => navigation.navigate("Storepage")} title="View More ->"></Button>
                 </VStack>
    
             </Box>
