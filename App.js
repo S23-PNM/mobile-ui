@@ -7,6 +7,7 @@ import Storepage from './pages/Storepage'
 import { NativeBaseProvider } from 'native-base';
 import Store from './components/Store';
 import AppLoading from 'expo-app-loading';
+import Foodpantry from './pages/foodpantry';
 import {
   useFonts,
   Inter_100Thin,
@@ -43,6 +44,7 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Other" component={Other} />
         <Stack.Screen name="Storepage" component={Storepage} />
+        <Stack.Screen name="Foodpantry" component={Foodpantry} />
       </Stack.Navigator>
     </NavigationContainer>
     </NativeBaseProvider>

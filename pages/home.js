@@ -35,4 +35,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 269.5,
     },
+    center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   });
