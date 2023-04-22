@@ -2,25 +2,20 @@ import React from 'react';
 import { StyleSheet,View,Text } from 'react-native';
 import { Box,VStack,Button } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
+import Topbox from './storeInformationTopBox';
 
 
 export default function Storeinformation(props) {
 
     let people = 0;
-
     const navigation = useNavigation();
 
     return (
 
         <View style={styles.center}>
             <VStack space={4}>
-                <Text style ={styles.center} style={styles.text}>{props.storeName} </Text>
-                <Box style={styles.topBox}>
-
-                    <Text style={styles.boxTopText}>Status</Text>
-                    <Text style={styles.boxBottomText}>Closed</Text>
-                    
-                </Box>
+                <Text style={[styles.titleText]}>{props.storeName} </Text>
+                <Topbox populationStatus={props.populationStatus}/>
                 <Box style={styles.topBox}>
 
                     <Text style={styles.boxTopText}>Current Occupancy</Text>
@@ -35,7 +30,9 @@ export default function Storeinformation(props) {
 
                 </Box>
 
-                <Button onPress={() => navigation.navigate("Other")}>Hello</Button>
+
+                <Button backgroundColor="#15803D" variant="outline" onPress={() => navigation.navigate("Other")}><Text color="#FFFFFF" style={styles.notificationButtonText}>Let me know when to go</Text></Button>
+                <Button variant="outline" onPress={() => navigation.navigate("Other")}><Text style={styles.homeButtonText}>Return Home</Text></Button>
                 
 
             </VStack>
@@ -91,6 +88,31 @@ const styles = StyleSheet.create({
         boxShadow: 2,
         borderWidth: 2,
       },
+      emptytopBox: {
+        width: 279,
+        height: 93,
+      },
+      moderatetopBox: {
+        width: 279,
+        height: 93,
+        borderRadius: 8,
+        boxShadow: 2,
+        borderWidth: 2,
+      },
+      crowdedtopBox: {
+        width: 279,
+        height: 93,
+        borderRadius: 8,
+        boxShadow: 2,
+        borderWidth: 2,
+      },
+      closedtopBox: {
+        width: 279,
+        height: 93,
+        borderRadius: 8,
+        boxShadow: 2,
+        borderWidth: 2,
+      },
       bottomBox: {
         width:279,
         height:122,
@@ -99,8 +121,36 @@ const styles = StyleSheet.create({
         borderWidth:2,
       },
       center: {
-        flex: 1,
-        justifyContent: 'center',
+        display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'space-between',
+      },
+      titleText: {
+        fontFamily: 'Inter',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontWeight: '700',
+        fontSize: 24,
+        paddingTop: 20,
+      },
+      homeButtonText:{
+        fontFamily: 'Inter',
+        fontStyle: 'normal',
+        fontWeight: '600',
+        fontSize: 20,
+        lineHeight: 24,
+        letterSpacing: -0.05,
+      },
+      notificationButtonText:{
+        fontFamily: 'Inter',
+        fontStyle: 'normal',
+        fontWeight: '600',
+        fontSize: 20,
+        lineHeight: 24,
+        textAlign: 'center',
+        letterSpacing: -0.05,
+        color: '#FFFFFF',
       },
   });

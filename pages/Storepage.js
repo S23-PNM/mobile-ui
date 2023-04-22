@@ -6,7 +6,7 @@ export default function Storepage({ navigation,route }) {
   return (
 
         <View>
-            <Storeinformation storeName="The Commons" topAddress="390 S 8th St"/>
+            <Storeinformation storeName="The Commons" topAddress="390 S 8th St" populationStatus="Empty"/>
         </View>
              
   );
