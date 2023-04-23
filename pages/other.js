@@ -8,8 +8,8 @@ export default function Other({ navigation, route }) {
 
         <View style={styles.center}>
           <Text style={styles.text}>PlatePal</Text>
-          <Store title="Food Pantry" status ="Closed Until 10PM" backgroundColor="#FEF2F2" borderColor="#B91C1C" textColor="#B91C1C" nextLocation="Foodpantry" textColor="#B91C1C"/>
-          <Store title="The Commons" status="Open Until 10AM" backgroundColor="#EFF6FF" borderColor="#BFDBFE" textColor="#1D4ED8" nextLocation="Storepage" textColor="#1D4ED8"/>
+          <Store populationStatus="Empty" title="Food Pantry" status ="Closed Until 10PM" backgroundColor="#FEF2F2" borderColor="#B91C1C" textColor="#B91C1C" nextLocation="Foodpantry" textColor="#B91C1C"/>
+          <Store populationStatus="Closed" title="The Commons" status="Open Until 10AM" backgroundColor="#EFF6FF" borderColor="#BFDBFE" textColor="#1D4ED8" nextLocation="Storepage" textColor="#1D4ED8"/>
           <Button onPress={() => navigation.navigate("Home")} title="Go to Home"></Button>
         </View>
              

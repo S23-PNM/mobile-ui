@@ -7,7 +7,7 @@ import Topbox from './storeInformationTopBox';
 
 export default function Storeinformation(props) {
 
-    let people = 0;
+    let people = 10;
     const navigation = useNavigation();
 
     return (
@@ -15,7 +15,7 @@ export default function Storeinformation(props) {
         <View style={styles.center}>
             <VStack space={4}>
                 <Text style={[styles.titleText]}>{props.storeName} </Text>
-                <Topbox populationStatus={props.populationStatus}/>
+                <Topbox populationStyling={props.populationStatus}/>
                 <Box style={styles.topBox}>
 
                     <Text style={styles.boxTopText}>Current Occupancy</Text>
@@ -38,7 +38,6 @@ export default function Storeinformation(props) {
             </VStack>
             
         </View>
-      
     
     )
 
@@ -59,6 +58,10 @@ const styles = StyleSheet.create({
         fontSize: 20,
         lineHeight: 24,
         letterSpacing: -0.05,
+        color: '#3F3F46',
+        flex: 0,
+        alignSelf: 'stretch',
+        flexGrow: 0,
       },
       boxBottomText: {
         width: 247,
@@ -69,6 +72,11 @@ const styles = StyleSheet.create({
         fontSize: 24,
         lineHeight: 29,
         letterSpacing: -0.05,
+        color: '#3F3F46',
+        flex: 0,
+        alignSelf: 'stretch',
+        flexGrow: 0,
+        order: 1,
       },
       boxAddressText: {
         width: 247,
