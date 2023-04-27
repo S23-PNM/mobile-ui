@@ -1,30 +1,8 @@
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Button } from "native-base";
-import Store from "../components/Store";
-
-export default function Home({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>PlatePal</Text>
-      <View>
-        <Button
-          variant="outline"
-          width={279}
-          style={{ marginTop: 170 }}
-          onPress={() => navigation.navigate("Other")}
-          title="Go to other"
-        >
-          <Text color="#f00">Open App</Text>
-        </Button>
-      </View>
-    </View>
-  );
-}
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: "Inter",
-    fontStyle: "normal",
     fontWeight: "bold",
     fontSize: 64,
     textAlign: "center",
@@ -34,11 +12,24 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 269.5,
-  },
-  center: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });
+
+export default function Home({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={{ flex: 1 }} />
+      <Text style={styles.title}>PlatePal</Text>
+      <View style={{ flex: 1 }}>
+        <Button
+          variant="outline"
+          style={{ marginTop: 170, width: 200 }}
+          onPress={() => navigation.navigate("Stores")}
+        >
+          <Text color="#f00">Open App</Text>
+        </Button>
+      </View>
+    </View>
+  );
+}
